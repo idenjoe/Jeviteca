@@ -1,0 +1,9 @@
+<search-filter ng-model="filter.name"></search-filter>
+<table class="table table-bordered">
+    <thhead>
+        <th>GÉNERO</th>
+        <th>ÁLBUMES</th>
+        <th>FAVORITOS</th>
+    </thhead>
+    <tr ng-repeat="genre in genres | filter:filter" genre-entity genre="genre"></tr>
+</table>

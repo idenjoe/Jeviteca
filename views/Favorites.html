@@ -1,0 +1,6 @@
+
+<div>
+	<span ng-if="::navegadorCompatible()">
+		<span ng-click="cambiarSeleccion()" class="glyphicon" ng-class="{ 'glyphicon-star': esFavorito(), 'glyphicon-star-empty': !esFavorito() }"></span>
+	</span>
+</div>

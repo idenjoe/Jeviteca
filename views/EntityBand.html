@@ -1,0 +1,9 @@
+<tr>
+    <td>
+        <a ng-href="#/bandas/{{ band.id }}/detalle">{{ band.name }}</a>
+    </td>
+    <td>{{ band.albums | countAlbums}}</td>
+    <td>
+        <span favorites id="band.id" tipo="band"></span>
+    </td>
+</tr>

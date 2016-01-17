@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="jeviteca">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeviteca</title>
+
+
+    <!-- Cargamos los CSS -->
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/jeviteca.css" />
+
+
+
+    <!-- Cargamos AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.4.0/angular-route-segment.min.js"></script>
+
+    <!-- Cargamos app.js -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Cargamos los controladores -->
+    <script src="scripts/controllers/NavigationBarController.js"></script>
+    <script src="scripts/controllers/AlbumsController.js"></script>
+    <script src="scripts/controllers/BandsController.js"></script>
+    <script src="scripts/controllers/GenresController.js"></script>
+    <script src="scripts/controllers/DetailAlbumController.js"></script>
+    <script src="scripts/controllers/DetailBandController.js"></script>
+
+    <!-- Cargamos las directivas -->
+    <script src="scripts/directives/AlbumEntity.js"></script>
+    <script src="scripts/directives/BandEntity.js"></script>
+    <script src="scripts/directives/Favorites.js"></script>
+    <script src="scripts/directives/GenreEntity.js"></script>
+    <script src="scripts/directives/SearchFilter.js"></script>
+    <script src="scripts/directives/RateEntity.js"></script>
+
+
+    <!-- Cargamos los servicios -->
+    <script src="scripts/services/AlbumsService.js"></script>
+    <script src="scripts/services/BandsService.js"></script>
+    <script src="scripts/services/GenresService.js"></script>
+
+    <!-- Cargamos los values -->
+
+
+    <!-- Cargamos filtros -->
+    <script src="scripts/filters/CountAlbums.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jeviteca</h1>
+        <nav ng-controller="NavigationBarCtrl">
+            <ul class="nav nav-tabs">
+                <li role="presentation" ng-class="{ active: routeIsAlbums() }">
+                    <a href="#/albumes">Álbumes</a>
+                </li>
+                <li role="presentation" ng-class="{ active: routeIsBands() }">
+                    <a href="#/bandas">Bandas</a>
+                </li>
+                <li role="presentation" ng-class="{ active: routeIsGenres() }">
+                    <a href="#/generos">Géneros</a>
+                </li>
+            </ul>
+        </nav>
+        <section app-view-segment="0"></section>
+    </div>
+
+</body>
+</html>

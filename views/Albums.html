@@ -1,0 +1,15 @@
+<search-filter ng-model="filter.title"></search-filter>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>PORTADA</th>
+        <th>TÍTULO</th>
+        <th>BANDA</th>
+        <TH>AÑO</TH>
+        <th>FAVORITO</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="album in albums | filter:filter" album-entity album="album"></tr>
+    </tbody>
+</table>

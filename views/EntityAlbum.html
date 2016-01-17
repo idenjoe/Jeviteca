@@ -1,0 +1,13 @@
+<tr>
+    <td>
+        <img ng-src="{{ rutaImagen() }}" ng-alt="{{ album.title }}" width="50px" class="img-rounded" />
+    </td>
+    <td>
+        <a ng-href="#/albumes/{{ album.id }}/detalle">{{ album.title }}</a>
+    </td>
+    <td>{{ album.band.name }}</td>
+    <td>{{ album.year }}</td>
+    <td>
+        <span favorites id="album.id" tipo="album"></span>
+    </td>
+</tr>

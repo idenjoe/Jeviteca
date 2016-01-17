@@ -1,0 +1,39 @@
+
+<div class="detalle-album">
+    <div>
+        <button ng-click="back()" class="btn btn-link">&laquo; Volver</button>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="datos-album">
+                <h2>
+                    <a ng-href="{{ linkWikipedia() }}" target="_blank">{{ band.name }}</a>
+                </h2>
+                <h4>{{band.origin}}</h4>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>MIEMBRO</th>
+                <th>INSTRUMENTOS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="member in band.members">
+                <td>{{ $index + 1 }}</td>
+                <td>
+                    <a ng-href="{{ linkSingerWikipedia(member.name) }}" target="_blank">{{member.name}}</a>
+                </td>
+                <td>{{member.instruments.toString()}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

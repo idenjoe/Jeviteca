@@ -1,0 +1,13 @@
+<search-filter ng-model="filter.name"></search-filter>
+<table class="table table-bordered">
+    <tr>
+        <thhead>
+            <th>NOMBRE</th>
+            <th>ÁLBUMS</th>
+            <TH>FAVORITO</TH>
+        </thhead>
+    </tr>
+    <tbody>
+        <tr ng-repeat="band in bands | filter:filter" band-entity band="band"></tr>
+    </tbody>
+</table>
